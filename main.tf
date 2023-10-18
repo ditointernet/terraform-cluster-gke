@@ -14,20 +14,6 @@ module "flux" {
   debug                   = var.dump_debug
 }
 
-module "cronitor" {
-  source = "github.com/getupcloud/terraform-module-cronitor?ref=v2.0.2"
-
-  api_endpoint       = module.gke.endpoint
-  cronitor_enabled   = var.cronitor_enabled
-  cluster_name       = var.cluster_name
-  customer_name      = var.customer_name
-  cluster_sla        = var.cluster_sla
-  suffix             = "gke"
-  tags               = [var.region]
-  pagerduty_key      = var.cronitor_pagerduty_key
-  notification_lists = var.cronitor_notification_lists
-}
-
 module "opsgenie" {
   source = "github.com/getupcloud/terraform-module-opsgenie?ref=v1.2"
 

@@ -23,7 +23,6 @@ locals {
     },
     var.manifests_template_vars,
     {
-      alertmanager_cronitor_id : try(module.cronitor.cronitor_id, "")
       alertmanager_opsgenie_integration_api_key : try(module.opsgenie.api_key, "")
       secret : random_string.secret.result
       suffix : random_string.suffix.result

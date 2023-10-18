@@ -1,28 +1,6 @@
 ## Common variables to all providers
 ## Copy to cluster repo
 
-variable "cronitor_enabled" {
-  description = "Creates and enables Cronitor monitor."
-  type        = bool
-  default     = false
-}
-
-variable "cronitor_notification_lists" {
-  description = "Cronitor Notification lists by SLA"
-  type        = any
-  default = {
-    high : ["default", "opsgenie-high-sla"]
-    low : ["default", "opsgenie-low-sla"]
-    none : []
-  }
-}
-
-variable "cronitor_pagerduty_key" {
-  description = "Cronitor PagerDuty key"
-  type        = string
-  default     = ""
-}
-
 variable "cluster_name" {
   description = "Cluster name"
   type        = string
