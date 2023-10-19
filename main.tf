@@ -69,6 +69,7 @@ module "gke" {
   project_id                           = var.project_id
   regional                             = var.regional
   region                               = var.region
+  release_channel                      = var.release_channel
   remove_default_node_pool             = var.remove_default_node_pool
   subnetwork                           = var.subnetwork
   zones                                = var.zones
