@@ -67,9 +67,9 @@ module "gke" {
   node_pools_taints                    = var.node_pools_taints
   node_pools                           = var.node_pools
   project_id                           = var.project_id
+  release_channel                      = var.release_channel
   regional                             = var.regional
   region                               = var.region
-  release_channel                      = var.release_channel
   remove_default_node_pool             = var.remove_default_node_pool
   subnetwork                           = var.subnetwork
   zones                                = var.zones
