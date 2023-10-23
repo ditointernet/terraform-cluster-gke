@@ -3,7 +3,7 @@ module "internet" {
 }
 
 module "flux" {
-  source = "github.com/ditointernet/terraform-module-flux?ref=2643cd447e0d71287ab46dddaa6d69b0aed5c156"
+  source = "github.com/ditointernet/terraform-module-flux?ref=779a200fdeaba17c59877c25ccaa971c48c8516a"
 
   git_repo                = var.flux_git_repo
   manifests_path          = var.manifests_path != "" ? var.manifests_path : "./clusters/${var.cluster_name}/gke/manifests"
