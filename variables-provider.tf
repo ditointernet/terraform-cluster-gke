@@ -123,7 +123,7 @@ variable "cluster_autoscaling" {
 variable "grant_registry_access" {
   description = "Grants created cluster-specific service account storage.objectViewer and artifactregistry.reader roles."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "network" {
@@ -268,12 +268,6 @@ variable "enable_cost_allocation" {
   description = "Enables Cost Allocation Feature and the cluster name and namespace of your GKE workloads appear in the labels field of the billing export to BigQuery"
   type        = bool
   default     = false
-}
-
-variable "grant_registry_access" {
-  type        = bool
-  description = "Grants created cluster-specific service account storage.objectViewer and artifactregistry.reader roles."
-  default     = true
 }
 
 variable "master_authorized_networks" {
