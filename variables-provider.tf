@@ -270,6 +270,12 @@ variable "enable_cost_allocation" {
   default     = false
 }
 
+variable "grant_registry_access" {
+  type        = bool
+  description = "Grants created cluster-specific service account storage.objectViewer and artifactregistry.reader roles."
+  default     = true
+}
+
 variable "master_authorized_networks" {
   description = "List of master authorized networks. If none are provided, disallow external access (except the cluster node IPs, which GKE automatically whitelists)."
   type        = list(object({ cidr_block = string, display_name = string }))
