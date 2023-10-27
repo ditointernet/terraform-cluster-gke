@@ -135,6 +135,12 @@ variable "grant_registry_access" {
   default     = true
 }
 
+variable "registry_project_ids" {
+  type        = list(string)
+  description = "Projects holding Google Container Registries. If empty, we use the cluster project. If a service account is created and the `grant_registry_access` variable is set to `true`, the `storage.objectViewer` and `artifactregsitry.reader` roles are assigned on these projects."
+  default     = []
+}
+
 variable "network" {
   description = "The VPC network to host the cluster in (required)"
   type        = string

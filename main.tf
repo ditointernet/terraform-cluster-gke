@@ -49,6 +49,7 @@ module "gke" {
   enable_binary_authorization          = var.enable_binary_authorization
   enable_cost_allocation               = var.enable_cost_allocation
   grant_registry_access                = var.grant_registry_access
+  registry_project_ids                 = var.registry_project_ids
   monitoring_enable_managed_prometheus = var.monitoring_enable_managed_prometheus
   monitoring_enabled_components        = var.monitoring_enabled_components
   horizontal_pod_autoscaling           = var.horizontal_pod_autoscaling
