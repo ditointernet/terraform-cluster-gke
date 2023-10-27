@@ -62,6 +62,15 @@ variable "configure_ip_masq" {
   default     = false
 }
 
+variable "datapath_provider" {
+  description = <<-EOF
+  	The desired datapath provider for this cluster. By default, `DATAPATH_PROVIDER_UNSPECIFIED` enables 
+	the IPTables-based kube-proxy implementation. `ADVANCED_DATAPATH` enables Dataplane-V2 feature.
+  EOF
+  type        = string
+  default     = "DATAPATH_PROVIDER_UNSPECIFIED"
+}
+
 variable "default_max_pods_per_node" {
   description = "The maximum number of pods to schedule per node"
   type        = number

@@ -41,6 +41,7 @@ module "gke" {
   version = "28.0.0"
 
   configure_ip_masq                    = var.configure_ip_masq
+  datapath_provider                    = var.datapath_provider
   default_max_pods_per_node            = var.default_max_pods_per_node
   deploy_using_private_endpoint        = var.enable_private_endpoint # yes, duplicated
   enable_private_endpoint              = var.enable_private_endpoint
